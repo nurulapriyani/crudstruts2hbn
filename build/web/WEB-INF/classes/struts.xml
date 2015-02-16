@@ -1,0 +1,25 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        
+    </package>
+    <package name="mahasiswa" extends="struts-default">
+        <action name="listmhs" class="com.nurul.action.mhsAction" method="Listmhs">
+            <result name="success">/listmhs.jsp</result>
+        </action>
+        <action name="addmhs" class="com.nurul.action.mhsAction" method="addmhs">
+            <result name="success">/addmhs.jsp</result>
+        </action>
+        <action name="deletemhs" class="com.nurul.action.mhsAction" method="deletemhs">
+            <result name="success" type="redirect">listmhs</result>
+        </action>
+        <action name="editmhs" class="com.nurul.action.mhsAction" method="editmhs">
+            <result name="success">/editmhs.jsp</result>
+        </action>
+    </package>
+    
+</struts>
